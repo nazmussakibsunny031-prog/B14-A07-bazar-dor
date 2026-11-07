@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@theme {
+  --font-sans: "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
+  --color-brand: #0b8a3e;
+  --color-brand-dark: #086b30;
+  --color-page: #f1f5ef;
+  --color-ink: #14231a;
+  --color-muted: #5f6f65;
+  --color-up: #d92d20;
+  --color-down: #0b8a3e;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-page); color: var(--color-ink); font-family: var(--font-sans); }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-track { animation: ticker 70s linear infinite; width: max-content; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  html { scroll-behavior: auto; }
+}

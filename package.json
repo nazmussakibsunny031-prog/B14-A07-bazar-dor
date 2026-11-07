@@ -1,0 +1,23 @@
+{
+  "name": "bazar-dor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "auth:migrate": "npx @better-auth/cli@latest migrate"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "better-auth": "^1.7.18",
+    "daisyui": "^5.7.50",
+    "next": "^15.5.29",
+    "pg": "^8.23.1",
+    "postcss": "^8.5.32",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hot-toast": "^2.6.1",
+    "tailwindcss": "^4.3.5"
+  }
+}
